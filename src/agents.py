@@ -79,7 +79,7 @@ class QLearningAgent(Agent):
         if self.prev_state != 0:
             prev_q = self.q.loc[[self.prev_state], self.prev_action][0]
             this_q = self.q.loc[[state], action][0]
-            reward = self.R.loc[[state], action][0]
+            reward = self.R.loc[[state], action].iloc[0]
             
             print ("\n")
             print (f'prev_q: {prev_q}')
